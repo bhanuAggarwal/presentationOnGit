@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>GIT</title>
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/sky.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+		<style type="text/css">
+			img{
+				border:none !important;
+			}
+		</style>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+		
+			<div class="slides">
+				<section>
+					<h1>Git & Github</h1>
+				</section>
+				<section>
+					<h3><b>Road Map</b></h3>
+					<ol>
+						<li>Version Control System</li>
+						<li>History of Git</li>
+						<li>What is Git?</li>
+						<li>Centralized Vs Distributed Development</li>
+						<li>Some Git Command</li>
+						<li>What's About GitHub?</li>
+					</ol>
+				</section>
+				<section>
+					<h3><b>Version Control System?</b></h3>
+					<p>
+						“An application that allows you to record changes to your codebase in a structured and controlled fashion.” 
+					</p>
+
+				</section>
+
+				<section>
+					<h3><b>History of Git</b></h3>
+					<ul>
+						<li>Originally written by Linus Torwalds. </li>
+						<li>Currently maintained by Junio Hamano. </li>
+						<li>To manage Linux Kernel development. </li>
+						<li>Open source, free (GNU GPL V2)‏.</li>
+					</ul> 
+				</section>
+				<section>
+					<section>
+						<h3><b>What is Git?</b></h3>	
+						<ul>
+							<li>Distributed Source Control System.</li>
+							<li>Focus on speed and efficiency.</li>
+							<li>Quite a unique design and therefore sometimes<br>a bit scary and difficult to understand.</li>
+							<li>Strong support for non-linear development </li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>Centralized Vs Distributed Development</h3>
+					</section>
+					<section>
+						<p>Centralized Development</p>
+						<img src="images/centralized.png"/>	
+					</section>
+					<section>
+						<p>Distributed Development</p>
+						<img src="images/distributed.png"/>
+					</section>
+					
+				</section>
+				<section>
+					<section>
+						<h3>GIT Example</h3>
+					</section>
+					<section>
+						<p>A New Git is Initialized as a Remote Repository</p>
+						<img src="images/1.png"/>
+					</section>
+					<section>
+						<p>John and Peter clone the git repository</p>
+						<img src="images/2.png"/>
+					</section>
+					<section>
+						<p>John does a commit</p>
+						<img src="images/3.png"/>
+					</section>
+
+					<section>
+						<p>John does a push</p>
+						<img src="images/4.png"/>
+					</section>
+
+					<section>
+						<p>Peter does a pull </p>
+						<img src="images/5.png"/>
+					</section>
+
+					<section>
+						<p>John does a commit & push</p>
+						<img src="images/6.png"/>
+					</section>
+
+					<section>
+						<p>Peter does a commit</p>
+						<img src="images/7.png"/>
+					</section>
+
+					<section>
+						<p>Peter does a pull (fetch & merge)</p>
+						<img src="images/8.png"/>
+					</section>
+
+					<section>
+						<p>Peter does a push</p>
+						<img src="images/9.png"/>
+					</section>
+
+					<section>
+						<p>John does a pull</p>
+						<img src="images/10.png"/>
+					</section>
+
+				</section>
+				<section>
+					<section style="text-align:left">
+						<h2 style="text-align:center"><b>Git Commands</b></h2>
+						<p>Getting and Creating Projects</p>
+						<p >
+							<p><b>init : </b></p>
+							To create a git repository from an existing directory of files. 
+							<br/>
+							<code>$ git init </code>
+						</p>
+						<p>
+							<p><b>Clone : </b> </p>
+							If you want to get a copy of a project, you need to clone it.
+							<br/> 
+							<code>$ git clone [url]</code> 
+						</p>
+					</section>
+					<section style="text-align:left">
+						<h2 style="text-align:center"><b>Git Commands</b></h2>
+						<p>Basic Snapshotting</p>
+						<p >
+							<p><b>git add : </b></p>
+							You have to add file contents to your staging area before you can commit them.
+							<br/>
+							<code>$ git add index.php</code>
+						</p>
+						<p>
+							<p>
+								<p><b>git status : </b> </p>
+								View the status of your files in the working directory and staging area.<br/> 
+								<code>$ git status </code> 
+							</p>
+						</p>
+					</section>
+					<section style="text-align:left">
+						<h2 style="text-align:center"><b>Git Commands</b></h2>
+						<p>Basic Snapshotting</p>
+						<p >
+							<p><b>git diff : </b></p>
+							Shows diff of what is staged and what is modified but unstaged.
+							<br/>
+							<code>$ git diff</code>
+						</p>
+						<p>
+							<p>
+								<p><b>git commit : </b> </p>
+								Records a snapshot of the staging area.<br/> 
+								<code>$ git commit -m “My comment” </code> 
+							</p>
+						</p>
+					</section>
+					<section style="text-align:left">
+						<h2 style="text-align:center"><b>Git Commands</b></h2>
+						<p>Basic Snapshotting</p>
+						<p >
+							<p><b>git reset : </b></p>
+							Undo changed and commits.
+							<br/>
+							<code>$ git reset</code>
+						</p>
+						<p>
+							<p>
+								<p><b>git rm : </b> </p>
+								Remove files from the staging area.<br/> 
+								<code>$ git rm index.php </code> 
+							</p>
+						</p>
+					</section>
+					<section style="text-align:left">
+						<h2 style="text-align:center"><b>Git Commands</b></h2>
+						<p>Basic Snapshotting</p>
+						<p >
+							<p><b>git mv : </b></p>
+							Git doesn’t track file renames.
+							<br/>
+							<code>$ git mv index.php index.html</code>
+						</p>
+						<p>
+							<p>
+								<p><b>git stash : </b> </p>
+								Save changes made in the current index and working directory for later.<br/> 
+								<code>$ git stash </code> 
+							</p>
+						</p>
+					</section>
+					<section style="text-align:left">
+						<h2 style="text-align:center"><b>Git Commands</b></h2>
+						<p>Branching and Merging</p>
+						<p >
+							<p><b>git branch : </b></p>
+							Switch to a new branch context
+							<br/>
+							<code> $ git branch </code><br/>
+							<code> git branch QA</code>
+						</p>
+						<p>
+							<p>
+								<p><b>git checkout : </b> </p>
+								Save changes made in the current index and working directory for later.<br/> 
+								<code>$ git checkout QA </code>
+								<br/>
+								<code> git checkout -b live </code> 
+							</p>
+						</p>
+					</section>
+					<section style="text-align:left">
+						<h2 style="text-align:center"><b>Git Commands</b></h2>
+						<p>Branching and Merging</p>
+						<p >
+							<p><b>git merge : </b></p>
+							Merge a branch context into your current one.
+							<br/>
+							<code>$ git merge QA</code>
+						</p>
+						<p>
+							<p>
+								<p><b>git log : </b> </p>
+								Show commit history of a branch.<br/> 
+								<code>$ git log </code> 
+							</p>
+						</p>
+					</section>
+					<section style="text-align:left">
+						<h2 style="text-align:center"><b>Git Commands</b></h2>
+						<p>Branching and Merging</p>
+						<p >
+							<p><b>git tag : </b></p>
+							Tag a point in history as important.
+							<br/>
+							<code>$ git tag -a v1.0 </code>
+						</p>
+					</section>
+					<section style="text-align:left">
+						<h2 style="text-align:center"><b>Git Commands</b></h2>
+						<p>Sharing and Updating Projects</p>
+						<p >
+							<p><b>git fetch : </b></p>
+							Download new branches and data from remote repository.
+							<br/>
+							<code>$ git fetch</code>
+						</p>
+						<p>
+							<p>
+								<p><b>git pull : </b> </p>
+								Fetch from a remote repo and try to merge into the current branch.<br/> 
+								<code>$ git pull </code> 
+							</p>
+						</p>
+					</section>
+					<section style="text-align:left">
+						<h2 style="text-align:center"><b>Git Commands</b></h2>
+						<p>Sharing and Updating Projects</p>
+						<p >
+							<p><b>git push : </b></p>
+							Push your new branches and data to a remote repository.
+							<br/>
+							<code>$ git push</code>
+						</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2><b>What's about GitHub?</b></h2>
+						<ul>
+							<li>It’s a Git repository hosting service… but it adds many of its own features.</li>
+							<li>While Git is a command line tool, GitHub provides a web-based graphical interface.</li>
+							<li>It also provides access control and several collaboration features, such as wikis and basic task management tools.</li>
+						</ul>
+					</section>
+					<section>
+						<h2><b>What's about GitHub?</b></h2>
+						<ul>
+							<li>By default, all projects are public and free. In you want a private project, then pay.</li>
+							<li>You can clone any public repository, follow projects and developers, post comments, etc.</li>
+							<li>It’s becoming the Facebook’s for developers.</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<h2><b> Git in Action!</b></h2>
+					<h3>Go to your computer and start playing</h3>
+					<ol>
+						<li>Create a new repository on GitHub.</li>
+						<li>Clone this repository.</li>
+						<li>Add new files.</li>
+						<li>Commit and push them.</li>
+						<li>Create a new branch and merge files.</li>
+					</ol>
+				</section>
+				<section>
+					<h3>Thank You for Your Attention!</h3>
+					<h2><b>Questions?</b></h2>
+
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
